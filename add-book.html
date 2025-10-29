@@ -7,92 +7,142 @@
     <title>Add Book - Library App</title>
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
+  margin: 0;
+  font-family: "Poppins", "Arial", sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f8fbff, #f2f7fc);
+}
 
-        header {
-            background: #1f2d56;
-            color: rgb(250, 247, 247);
-            text-align: center;
-            padding: 0.3rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            backdrop-filter: blur(5px);
-        }
+/* 🌤️ Header */
+header {
+  background: #ffffff;
+  color: #2d2d2d;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #eaeaea;
+}
 
-        nav {
-            padding: 0.5rem;
-            text-align: center;
-        }
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #355c7d;
+  margin: 0;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
+/* 🔗 Navigation */
+nav {
+  padding: 0.5rem;
+  text-align: center;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+nav a {
+  color: #355c7d;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
 
-        .form-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 70vh;
-            padding: 2rem 1rem;
-        }
+nav a:hover {
+  color: #5271ff;
+}
 
-        form {
-            background: rgba(243, 242, 242, 0.15);
-            backdrop-filter: blur(15px);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            max-width: 400px;
-            width: 100%;
-        }
+/* 🧾 Form Container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  padding: 2rem 1rem;
+  background: transparent;
+}
 
-        input,
-        select {
-            width: 100%;
-            padding: 0.75rem;
-            margin: 0.5rem 0;
-            border: none;
-            border-radius: 8px;
-            background: rgba(241, 238, 238, 0.7);
-            box-sizing: border-box;
-        }
+/* 📋 Form Card */
+form {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e7e7e7;
+  max-width: 420px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
 
-        button {
-            width: 100%;
-            padding: 0.75rem;
-            background: rgba(31, 45, 86, 0.8);
-            color: rgb(238, 233, 233);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 1rem;
-        }
+form:hover {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
 
-        button:hover {
-            background: rgba(31, 45, 86, 1);
-        }
+/* 🧩 Labels and Inputs */
+label {
+  display: block;
+  margin: 0.6rem 0 0.3rem;
+  color: #374785;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
 
-        label {
-            display: block;
-            margin: 0.5rem 0 0.25rem;
-            color: rgb(27, 27, 27);
-            font-weight: bold;
-        }
-    </style>
+input,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.4rem 0 1rem;
+  border: 1px solid #cfd8ef;
+  border-radius: 10px;
+  background: #f9fbff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: #5271ff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(82, 113, 255, 0.25);
+}
+
+/* 🎨 Button */
+button {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, #5271ff, #84b6f4);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #355c7d, #5271ff);
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  form {
+    padding: 2rem 1.2rem;
+  }
+
+  nav a {
+    margin: 0 0.5rem;
+  }
+}
+</style>
 </head>
 
 <body>
