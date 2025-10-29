@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List - Library App</title>
+    <link rel="stylesheet" href="bookList.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Library - Book List</h1>
+        <nav>
+            <a href="add-book.html">Add Book</a>
+            <a href="index.html">View Books</a>
+        </nav>
+    </header>
+
+    <div class="filter-container">
+        <input type="text" id="filter" placeholder="Filter by title or author...">
+    </div>
+    <div class="wrapper">
+        <h1 class="page-title">Book Collection</h1>
+        <div id="root" class="card-grid"></div>
+    </div>
+    <script type="module" src="bookList.js"></script>
+</body>
+
+</html>
